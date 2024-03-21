@@ -13,7 +13,7 @@ const stateTax = {
 
 const setTax = (state) => {
     let st = state.toLowerCase();
-    if(stateTax[st]) {
+    if(stateTax[st] || st === 'alaska') {
         const taxPerc = stateTax[st];
         return taxPerc;
     } else {
